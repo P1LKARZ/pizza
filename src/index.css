@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f0f2f5;
+  color: #2e2e2e;
+  font-weight: 400;
+  padding: 4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1.2rem solid #4caf50;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.2rem;
+}
+
+/* *************** HEADER *************** */
+
+.header h1 {
+  text-align: center;
+  font-size: 5.6rem;
+  font-weight: 600;
+  color: #4caf50;
+  position: relative;
+  letter-spacing: 1.5px;
+  padding: 1rem 0;
+}
+
+.header h1::before,
+.header h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10rem;
+  height: 2px;
+  background-color: #4caf50;
+}
+
+.header h1::before {
+  left: 0;
+}
+
+.header h1::after {
+  right: 0;
+}
+
+/* *************** MENU *************** */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.menu h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 0.6rem;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+.menu > p {
+  font-size: 1.6rem;
+  color: #555;
+  max-width: 70%;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* *************** PIZZAS *************** */
+
+.pizzas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+  list-style: none;
+  width: 100%;
+}
+
+.pizza {
+  display: flex;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 2rem;
+  transition: transform 0.2s;
+}
+
+.pizza:hover {
+  transform: translateY(-4px);
+}
+
+.pizza img {
+  width: 10rem;
+  aspect-ratio: 1;
+  border-radius: 0.8rem;
+  object-fit: cover;
+}
+
+.pizza div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.pizza h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.pizza p {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #666;
+  line-height: 1.4;
+}
+
+.pizza span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #4caf50;
+}
+
+.pizza.sold-out {
+  opacity: 0.6;
+}
+
+.pizza.sold-out img {
+  filter: grayscale(80%);
+}
+
+/* *************** FOOTER *************** */
+
+.footer {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #777;
+}
+
+/* *************** ORDER BUTTON *************** */
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.2rem 2.8rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #43a047;
+}
